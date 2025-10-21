@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Graduate', sans-serif;
+  background-color: #B0EDE1;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* ========== HEADER ========= */
+.header {
+  text-align: left;
+  padding: 1.2rem 2rem;
+  font-size: clamp(14px, 1.5vw, 20px);
+  background-color: white;
+}
+
+/* ========== NAVBAR ========= */
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: linear-gradient(to right, #4ab1d8, #5eb1f0, #2ec4d9);
+  padding: 2rem 2.5rem;
+  position: relative;
+  gap: 1.5rem;
+  min-height: 100px;
+}
+
+#logo {
+  font-size: clamp(40px, 6vw, 60px);
+  font-family: "Rampart One", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* ========== NAV LINKS ========= */
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: clamp(26px, 4vw, 36px);
+  padding: 0.8rem 1.5rem;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* ========== HAMBURGER ICON ========= */
+.menu-icon {
+  display: none;
+  width: 40px;
+  cursor: pointer;
+  justify-self: end;
+}
+
+/* ========== MAIN ========= */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.profile-pic img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.03);
+}
+
+.intro {
+  text-align: center;
+}
+
+.bonjour {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: bold;
+}
+
+.name {
+  font-size: clamp(30px, 5vw, 50px);
+  margin: 10px 0;
+}
+
+.details {
+  font-size: clamp(24px, 4vw, 40px);
+  margin-bottom: 1rem;
+}
+
+.quote {
+  font-family: "Rammetto One", sans-serif;
+  font-size: clamp(24px, 5vw, 50px);
+  font-weight: bold;
+  font-style: italic;
+  color: #000;
+  margin-top: 1rem;
+}
+
+/* ========== FOOTER ========= */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* ===== MEDIA QUERY FOR VERY SMALL SCREENS (300px - 400px) ===== */
+@media (min-width: 300px) and (max-width: 400px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    min-height: 65px;
+    gap: 0.5rem;
+  }
+
+  #logo {
+    font-size: clamp(20px, 7vw, 28px);
+    flex-shrink: 1;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 32px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    right: 0.5rem;
+    width: 85%;
+    padding: 0.8rem;
+    border-radius: 6px;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 16px;
+    padding: 0.4rem 0;
+  }
+
+  .header {
+    text-align: center;
+    font-size: clamp(12px, 3vw, 16px);
+    padding: 0.8rem;
+  }
+
+  .main {
+    padding: 1.5rem;
+  }
+
+  .profile-pic img {
+    max-width: 250px;
+  }
+}
+
+/* ===== MEDIA QUERY FOR MEDIUM SCREENS (401px - 800px) ===== */
+@media (min-width: 401px) and (max-width: 800px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  #logo {
+    font-size: clamp(30px, 5vw, 40px);
+  }
+
+  .nav-links {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    font-size: clamp(20px, 5vw, 28px);
+    padding: 0.5rem 1rem;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* ===== MEDIA QUERY FOR TABLET SCREENS (801px - 1000px) ===== */
+@media (min-width: 801px) and (max-width: 1000px) {
+  .navbar {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    min-height: 90px;
+  }
+
+  #logo {
+    font-size: clamp(35px, 5vw, 50px);
+  }
+
+  .nav-links {
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+  }
+
+  .nav-links a {
+    font-size: clamp(22px, 3vw, 30px);
+    padding: 0.6rem 1rem;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
