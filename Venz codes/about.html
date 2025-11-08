@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | My Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div id="logo">MY<br>PORTFOLIO</div>
+
+    <!-- Hamburger Menu Icon -->
+    <img src="hamburger_icon.jfif" alt="Menu" class="menu-icon" id="menu-toggle" />
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">HOME 🏠</a>
+      <a href="about.html" style="color: white;">ABOUT 📋</a>
+      <a href="contact.html">CONTACT US ☎️</a>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <main class="main">
+    <div class="profile-pic">
+      <img src="venzpic.jfif" alt="Venz Horace D. Carabot" />
+    </div>
+
+    <div class="intro">
+
+      <p class="quote">
+        “Live Strong, Play Hard, and Enjoy Every Moment.”
+      </p>
+
+      <div class="about-text" style="margin-top: 1.5rem; font-size: clamp(18px, 3vw, 28px); line-height: 1.6; text-align: center;">
+        <p>Hi there! 👋 I'm <b>Venz Horace D. Carabot</b>, and I’m passionate about self-improvement and enjoying life’s adventures.</p>
+        <p>I love spending my time at the <b>gym</b> 🏋️‍♂️, pushing myself to get stronger both physically and mentally.</p>
+        <p>When I’m not training, you’ll probably find me <b>playing computer games</b> 🎮 — I enjoy strategy, teamwork, and a little friendly competition!</p>
+        <p>And of course, I’m a huge fan of <b>anime</b> 🎬 — I love how it inspires creativity, emotion, and amazing stories.</p>
+      </div>
+
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Venz Horace D. Carabot. All rights reserved.
+  </footer>
+
+  <!-- Toggle Script -->
+  <script>
+    const menuIcon = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
